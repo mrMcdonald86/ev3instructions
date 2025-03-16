@@ -28,35 +28,29 @@ const StepViewer = ({ totalSteps }) => {
   };
 
   return (
-    <div
-      className="d-flex flex-column vh-100"
-    >
-      <div className="d-flex flex-grow-1">
-        <div className="col-8 d-flex justify-content-center align-items-center text-white">
+    <div className="d-flex flex-column vh-100">
+      <div className="d-flex flex-grow-1 overflow-hidden">
+        <div className="col-8 d-flex justify-content-left align-items-left text-white">
           <img 
             src={`/images/steps_page-${step.toString().padStart(4, '0')}.jpg`} 
             alt={`Step ${step.toString().padStart(4, '0')}`} 
-            className="img-fluid" 
-            style={{ objectFit: 'contain', maxHeight: '80vh', maxWidth: '80vw' }} 
+            className="img-fluid"
+            style={{ objectFit: 'contain', maxHeight: '100%', maxWidth: '100%' }}
           />
         </div>
-        <RenderModel s={step} />
+        <div className="d-flex flex-grow-1 w-50 h-50">
+          <RenderModel s={step} />
+        </div>
       </div>
-      
-      
 
       {/* The bottom navbar */}
       <div
-        className={`d-flex bg-secondary text-white text-center p-3 position-fixed bottom-0 w-100 transition-opacity opacity-100`}
-        style={{
-          backgroundColor: 'rgba(128, 128, 128, 0.5)', // Grey with transparency
-          transition: 'opacity 0.3s ease', // Smooth opacity transition
-        }}
-
+        className="d-flex bg-secondary text-white text-center p-3 position-fixed bottom-0 w-100"
+        style={{ backgroundColor: 'rgba(128, 128, 128, 0.5)' }}
       >
-        <div className="d-flex justify-content-center align-items-center gap-3 w-100 opacity-100">
-          <button onClick={handlePrevious} className="btn btn-light opacity-100">◀️</button>
-          <div className='opacity-100'>
+        <div className="d-flex justify-content-center align-items-center gap-3 w-100">
+          <button onClick={handlePrevious} className="btn btn-light">◀️</button>
+          <div>
             <label className="me-2">Page Number:</label>
             <input
               type="number"
@@ -64,7 +58,7 @@ const StepViewer = ({ totalSteps }) => {
               max={totalSteps}
               value={inputValue}
               onChange={handleInputChange}
-              onKeyDown={handleKeyDown}  // Listen for Enter key press
+              onKeyDown={handleKeyDown}
               className="form-control d-inline w-50"
             />
           </div>
