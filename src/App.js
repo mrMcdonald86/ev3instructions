@@ -38,7 +38,7 @@ const StepViewer = ({ totalSteps }) => {
             style={{ objectFit: 'contain', maxHeight: '100%', maxWidth: '100%' }}
           />
         </div>
-        <div className="d-flex flex-grow-1 w-50 h-50">
+        <div>
           <RenderModel s={step} />
         </div>
       </div>
