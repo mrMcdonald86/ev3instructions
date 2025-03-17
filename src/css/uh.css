@@ -1,5 +1,7 @@
 /* Model viewer */
 .flex-column div model-viewer{
- top:-97px;
- left:-48px;
-}      
+ position:relative;
+ top:-133px;
+ left:-76px;
+}
+
