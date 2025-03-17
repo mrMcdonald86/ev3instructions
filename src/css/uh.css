@@ -1,7 +1,7 @@
 /* Model viewer */
 .flex-column model-viewer{
     margin-left:50px;
-    margin-right:-50px;
+    margin-right:50px;
     transform:translatex(-32px) translatey(36px);
     width:703px !important;
     height:875px !important;
