@@ -1,6 +1,6 @@
 import './css/uh.css'
 
-function RenderModel({ s, c }) {
+function RenderModel({ s }) {
     return (
         <div className="container">
             {s === 1 && <SimpleRender src={'brain'}/>}
@@ -75,7 +75,7 @@ function RenderModel({ s, c }) {
         </div>
     )
     function SimpleRender({ src }) {
-        return <model-viewer src={`models/${src}.glb`} camera-controls touch-action="pan-y" className={c} style={{ height: '90vh', width: '65vh'}}></model-viewer>;
+        return <model-viewer src={`models/${src}.glb`} camera-controls touch-action="pan-y" style={{ height: '90vh', width: '65vh'}}></model-viewer>;
     }
 }
 
