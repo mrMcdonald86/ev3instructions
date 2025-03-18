@@ -75,7 +75,7 @@ function RenderModel({ s }) {
         </div>
     )
     function SimpleRender({ src }) {
-        return <model-viewer src={`models/${src}.glb`} camera-controls touch-action="pan-y" style={{ height: '90vh', width: '65vh', float: 'left'}}></model-viewer>;
+        return <model-viewer src={`models/${src}.glb`} camera-controls touch-action="pan-y" style={{ height: '90vh', width: '65vh', position: 'relative' }}></model-viewer>;
     }
 }
 
