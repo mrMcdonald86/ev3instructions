@@ -1,4 +1,5 @@
 {
+  "homepage": "https://mrMcdonald86.github.io/ev3instructions",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
